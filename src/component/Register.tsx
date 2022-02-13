@@ -105,7 +105,7 @@ function Register(props: any) {
         },})
         .then((response) => {
             // access token, refresh token 저장 (어디에다가 할지)
-            localStorage.setItem("isLogged",response.data.jwt_token);
+            localStorage.setItem("retoken",response.data.jwt_token);
             props.history.push("/");
         })
         .catch((error)=>{
